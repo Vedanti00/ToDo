@@ -11,9 +11,12 @@ function App() {
   }
 
   function addItem() {
-    setItems((prevItems) => {
-      return [...prevItems, inputText];
-    });
+    if (inputText !== '') {
+      setItems((prevItems) => {
+        return [...prevItems, inputText];
+      });
+    }
+
     setInputText('');
   }
 
